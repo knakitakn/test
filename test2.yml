@@ -1,0 +1,12 @@
+---
+- hosts: cisco
+  gather_facts: no
+  connection: local
+  become: true
+
+  tasks:
+    - name: interface
+      ios_interface:
+        name: Loopback10
+        state: up
+        
