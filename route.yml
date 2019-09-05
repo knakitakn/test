@@ -1,0 +1,11 @@
+---
+- hosts: cisco
+  gather_facts: no
+
+  tasks:
+    - name: route
+      ios_static_route:
+        prefix: 172.17.165.16
+        mask: 255.255.255.240
+        next_hop:10.0.1.153
+        
